@@ -13,7 +13,7 @@ Cloud Computing,
 Load Balancing
 
 Deployed on Google Cloud Compute Engine.
-URL = http://35.184.172.99/cgi-bin/TensorFlowApi/world.py/?name=
+URL = http://35.209.53.64 /cgi-bin/TensorFlowApi/world.py/?name=
 
 !!!!!!!!!! NOTE !!!!!!!!!!!!!
 
