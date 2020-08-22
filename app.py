@@ -56,7 +56,10 @@ arguments = cgi.FieldStorage()
 
 
 #Initial Code Execution
-Values = nameGuess(arguments["name"].value) #Grab Arguments from URL then call TF Model Inference
+try:
+   Values = nameGuess(arguments["name"].value) #Grab Arguments from URL then call TF Model Inference
+except:
+   Values = ["50.00","NA"]
 DictionaryValues = {"Probability":Values[0] ,"Gender":Values[1] } #Change TF Model Array to Dictionary
 JSONPackage = json.dumps(DictionaryValues) #Change Dictionary to JSON Package
 print(JSONPackage) #Return JSON Package
