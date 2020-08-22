@@ -26,18 +26,25 @@ def nameGuess( nameToGuess ):
    model = keras.models.load_model("./NameGuess")
    nmLen = 9
    predict_guess = [ nameToGuess ]
+   
+   #String Manipulation
    for i in range(0,len(predict_guess)):
       predict_guess[i] = predict_guess[i].zfill(nmLen)
       predict_guess[i]= predict_guess[i].lower()
    if(len(predict_guess[i]) > nmLen):
       predict_guess[i] = predict_guess[i][:nmLen]
+      
+   #Char to Int
    num_predict = [[0 for i in range(nmLen)] for j in range(len(predict_guess))]
    for i in range(0,len(predict_guess)):
       for j in range (0,nmLen):
          num_predict[i][j] = ord(predict_guess[i][j])
          num_predict[i][j] = num_predict[i][j] - 96 # EXP
+   #Int to One Hot Encoding 2-D Array
    num_predict = np.array(num_predict)
    num_predict = (np.arange(26) == num_predict[...,None]).astype(int)
+   
+   #Model Inference
    answer = model.predict(num_predict)
    percentMale = (answer[0][0]) * 100
    percentFemale = (answer[0][1]) * 100
@@ -47,10 +54,12 @@ def nameGuess( nameToGuess ):
       return((str(percentMale) , "M"))
 arguments = cgi.FieldStorage()
 
-Values = nameGuess(arguments["name"].value)
-DictionaryValues = {"Probability":Values[0] ,"Gender":Values[1] }
-JSONPackage = json.dumps(DictionaryValues)
-print(JSONPackage)
+
+#Initial Code Execution
+Values = nameGuess(arguments["name"].value) #Grab Arguments from URL then call TF Model Inference
+DictionaryValues = {"Probability":Values[0] ,"Gender":Values[1] } #Change TF Model Array to Dictionary
+JSONPackage = json.dumps(DictionaryValues) #Change Dictionary to JSON Package
+print(JSONPackage) #Return JSON Package
 
 
 
