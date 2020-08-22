@@ -20,6 +20,10 @@ Load Balancing
 Deployed on Google Cloud Compute Engine.
 URL = http://35.209.53.64/cgi-bin/TensorFlowApi/world.py/?name=
 
+Performance Metric:
+Version 1.0: Average Response Time: 15.32 Seconds over 10 Trials.
+Version 2.0: Upgrade to Flask as CGI has an extensive build process that results in massive wait times.
+
 !!!!!!!!!! NOTE !!!!!!!!!!!!!
 
 THIS MODEL IS PURELY FOR RESEARCH AND STUDY OF CLASSIFICATION MODELS, THIS IS NOT TO BE TAKEN AS ANYTHING MORE THAN A MATHEMATICAL CLASSIFICATION PROBLEM. THIS IS A CLASSICAL CLASSIFICATION PROBLEM THAT IS ROUTINELY USED TO DEMONSTRATE NEW METHODOLOGIES OF CLASSIFICATION.
