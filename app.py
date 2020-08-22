@@ -1,5 +1,16 @@
-  GNU nano 4.8                                                                                                                   world.py                                                                                                                             
 #!/usr/bin/python3
+#Purpose: Use Research Apprenticeship Developed TensorFlow Model NameGuess.py via a Web API hosted on the cloud with a load balancer.
+#Processes:
+#Pull Arguments from the URL, should contain one argument of name.
+#Name is to be given to the nameGuess Function which fits the data using numpy, keras, and tensorflow to infer from the model.
+#Model Inference Works as follows: (FOR MORE INFORMATION CHECK MY NAMEGUESS REPO)
+#   a) String Standardization = Trim name length to 9 then zero fill the char array for any open spaces and change all to lower case
+#   b) Char to Int converstion = Change all chars to ascii values, then translate values such that a = 0
+#   c) One Hot Encoding = change an individual ascii value to its unique one hot encode, this changes the data's dimension to 2 Dimensions
+#   d) Name has now been converted to acceptable input, infer from the model and return the probabilities for M or F
+#Return 2 Arguments, Porbability of more likely Gender, and the more likely Gender.
+#JSON encode the data
+#Return the JSON data to the browser
 
 import cgitb
 import cgi
