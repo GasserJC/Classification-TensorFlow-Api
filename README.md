@@ -5,7 +5,8 @@ Technologies:
 Python,
 TensorFlow,
 Keras,
-Flask
+CGI
 
-Deployed on Google Cloud App Engine:
-URL = 
+Deployed on Google Cloud Compute Engine.
+URL = http://35.184.172.99/cgi-bin/TensorFlowApi/world.py/?name=
+
