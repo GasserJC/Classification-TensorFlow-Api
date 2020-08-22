@@ -1,5 +1,10 @@
 # TensorFlowApi
-This is a python API that allows you to utilize my name to gender Convoluted Nerural Network machine learning model via a Web API. This is utilized via an HTTP Response of: URL\?name=*input*. As of Fall 2020 this CNN Name to Gender Classification model had record accuracy in the field, it was Developed by myself during my Research Apprenticeship at UWW 2019-2020.
+This is a python API that allows you to utilize my name to gender Convoluted Nerural Network machine learning model via a Web API. As of Fall 2020 this CNN Name to Gender Classification model had record accuracy in the field, it was Developed by myself during my Research Apprenticeship at UWW 2019-2020.
+
+
+How To:
+This is utilized via an HTTP Response of: URL\?name=*input* 
+If no name is given, or an error with your name occurs the probability is marked at 50.00% and NA for the gender.
 
 
 Technologies:
