@@ -3,7 +3,7 @@ This is a python API that allows you to utilize my name to gender Convoluted Ner
 
 
 How To:
-This is utilized via an HTTP Response of: URL\?name=*input* 
+This is utilized via an HTTP Response of: http://35.209.53.64/cgi-bin/TensorFlowApi/world.py/?name=<input>
 If no name is given, or an error with your name occurs the probability is marked at 50.00% and NA for the gender.
 
 
