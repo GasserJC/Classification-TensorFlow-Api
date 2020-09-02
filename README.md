@@ -20,9 +20,9 @@ Load Balancing
 Deployed on Google Cloud Compute Engine.
 URL = http://35.209.53.64/cgi-bin/TensorFlowApi/world.py/?name=
 
-# Performance Metric:
-Version 1.0: Average Response Time: 15.32 Seconds over 10 Trials.
-Version 2.0: Upgrade to Flask as CGI has an extensive build process that results in massive wait times.
+# Performance Metric & Version
+Version 1.0: Average Response Time:15.32 seconds. Python-CGI and Apache2 <br/>
+Version 2.0: Upgrade to a scalable docker & kubernetes cluster to reduce time at any load. Average Response Time Goal: 2.5 Seconds.
 
 # NOTE!
 
